@@ -33,6 +33,6 @@ const jsx = <div>
 // );
 
 const container = document.getElementById('app');
-
+// JSX es solamente Syntaxis Sugar, ya que gracias a Babel y react-create-app se transpila a JS
 // ReactDOM.render(__qué__, __dónde__);
 ReactDOM.render(jsx, container);
