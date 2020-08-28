@@ -7,7 +7,7 @@ class Badge extends React.Component {
     render() {
         const {
             firstName,
-            secondName,
+            lastName,
             jobTitle,
             socialMedia,
             avatarURL
@@ -19,7 +19,7 @@ class Badge extends React.Component {
 
             <div className='Badge_section-name'>
                 <img className='Badge_avatar' src={avatarURL} alt="Avatar" />
-                <h1>{firstName} <br /> {secondName}</h1>
+                <h1>{firstName} {lastName}</h1>
             </div>
 
             <div className='Badge_section-info'>
