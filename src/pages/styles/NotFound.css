@@ -1,0 +1,13 @@
+.NotFound__background {
+    background: url('../../images/stars.svg'), rgba(0, 0, 0, 0.883);
+    background-repeat: repeat;
+    width: 100%;
+    height: 606px;
+}
+
+.NotFound__background h1{
+    color: white;
+    font-size: 160px;
+    text-align: center;
+    padding-top: 70px;
+}
