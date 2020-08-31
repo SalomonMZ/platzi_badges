@@ -1,0 +1,20 @@
+.StartNow__container {
+  margin: 250px 0px 0px 380px;
+}
+
+.StartNow__text h5 {
+  font-weight: bolder;
+  margin-bottom: 1px;
+}
+
+.StartNow__text {
+  width: 100%;
+}
+
+.StartNow__button {
+  text-align: center;
+}
+
+.StartNow__button-width {
+  width: 170px;
+}
