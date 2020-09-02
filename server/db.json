@@ -60,6 +60,22 @@
       "jobTitle": "Designer",
       "socialMedia": "pedritoffical",
       "id": "_5BlJUt"
+    },
+    {
+      "firstName": "Luisa Maria",
+      "lastName": "Aristizabal",
+      "email": "lui.saimon123@example.com",
+      "jobTitle": "UX/UI Designer",
+      "socialMedia": "luisaimon3",
+      "id": "qeHU5Cu"
+    },
+    {
+      "firstName": "Cristian",
+      "lastName": "Zapata",
+      "email": "criszapata@example.com",
+      "jobTitle": "Angular Developoer",
+      "socialMedia": "criszapata",
+      "id": "qmQ8wDB"
     }
   ]
 }

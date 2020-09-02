@@ -1,20 +1,6 @@
 import React from 'react';
 
 class BadgeForm extends React.Component {
-    // state = {
-    //     JobTitle: 'Developer'
-    // };
-    // handleChange = e => {
-    //     // console.log({ value: e.target.value, name: e.target.name })
-    //     this.setState({
-    //         [e.target.name]: e.target.value
-    //     });
-    // }
-
-    // Es equivalente a declarar el metodo
-    // handleChange = e => {
-    //     console.log({value: e.target.value, name: e.target.name})
-    // }
 
     handleClick = e => {
         console.log('Botton was clicked')
@@ -27,6 +13,10 @@ class BadgeForm extends React.Component {
     // }
 
     render() {
+        const buttonStyle = {
+            width: '120px',
+            'margin-top': '15px'
+        }
         return (
             <div>
                 <h1>New Attendant</h1>
@@ -87,7 +77,11 @@ class BadgeForm extends React.Component {
                         />
                     </div>
 
-                    <button onClick={this.handleClick} className="btn btn-primary">Save</button>
+                    <button onClick={this.handleClick} className="btn btn-primary" style={buttonStyle}>Save</button>
+
+                    {this.props.error && (
+                        <p className='text-danger'>{this.props.error.message}</p>
+                    )}
                 </form>
             </div>
         )

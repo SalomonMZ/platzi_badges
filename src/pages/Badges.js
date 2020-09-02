@@ -53,7 +53,7 @@ class Badges extends React.Component {
                 <div className='Badge__container'>
                     <div className="Badges__buttons">
                         <Link to="/badges/new" className='btn btn-primary'>
-                            New Badge
+                            Create a New Badge
                         </Link>
                     </div>
                 </div>
