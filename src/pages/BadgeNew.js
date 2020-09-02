@@ -1,17 +1,18 @@
 import React from 'react';
 import Badge from '../components/Badge.js'
 import BadgeForm from '../components/BadgeForm'
-import header from '../images/badge-header.svg'
+import api from '../api'
+import header from '../images/Home_conf.png'
 import './styles/BadgeNew.css'
 
 class BadgeNew extends React.Component {
     state = {
         form: {
-            FirstName: '',
-            LastName: '',
-            Email: '',
-            JobTitle: '',
-            SocialMedia: ''
+            firstName: '',
+            lastName: '',
+            email: '',
+            jobTitle: '',
+            socialMedia: ''
         }
     }
 
@@ -26,26 +27,40 @@ class BadgeNew extends React.Component {
         })
     }
 
+    handleSubmit = async e => {
+        e.preventDefault();
+        this.setState({ loading: true, error: null })
+
+        try {
+            await api.badges.create(this.state.form)
+            this.setState({ loading: false });
+        } catch (error) {
+            this.setState({ loading: false, error: error })
+
+        }
+
+    }
+
     render() {
         return (
             <>
                 <div className='BadgeNew__hero'>
-                    <img className='img-fluid' src={header} alt="Header" />
+                    <img className='BadgeNew__hero-img img-fluid' src={header} alt="Header" />
                 </div>
 
                 <div className="container">
                     <div className="row">
                         <div className="col-6">
-                            <Badge firstName={this.state.form.FirstName}
-                                lastName={this.state.form.LastName}
-                                jobTitle={this.state.form.JobTitle}
-                                socialMedia={this.state.form.SocialMedia}
-                                email={this.state.form.Email}
-                                avatarURL='http://gravatar.com/avatar/a8a7b2676b97e2c80237b810fa01f4e2?d=identicon'
+                            <Badge firstName={this.state.form.firstName || 'FIRST_NAME'}
+                                lastName={this.state.form.lastName || 'LAST_NAME'}
+                                jobTitle={this.state.form.jobTitle || 'JOB_TITLE'}
+                                socialMedia={this.state.form.socialMedia || 'social_media'}
+                                email={this.state.form.email || 'EMAIL'}
                             />
                         </div>
                         <div className="col-6">
                             <BadgeForm
+                                onSubmit={this.handleSubmit}
                                 onChange={this.handleChange}
                                 formValues={this.state.form} />
                         </div>

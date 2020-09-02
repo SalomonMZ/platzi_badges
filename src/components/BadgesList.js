@@ -2,6 +2,7 @@ import React from 'react';
 import Badge from './Badge'
 import {Link} from 'react-router-dom'
 
+
 class BadgesList extends React.Component {
 
     render() {
@@ -24,8 +25,8 @@ class BadgesList extends React.Component {
                             firstName={element.firstName}
                             lastName={element.lastName}
                             jobTitle={element.jobTitle}
-                            socialMedia={element.twitter}
-                            avatarURL={element.avatarUrl}
+                            socialMedia={element.twitter || element.socialMedia}
+                            email={element.email}
                             />
                         </li>
                     )
