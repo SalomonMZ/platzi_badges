@@ -1,14 +1,15 @@
 import React from 'react';
 import Badge from './Badge'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 class BadgesList extends React.Component {
 
     render() {
-        
-        if(this.props.badges.length === 0){
-            return(
+        const badges = [...this.props.badges].reverse();
+
+        if (this.props.badges.length === 0) {
+            return (
                 <div>
                     <h4>We did not found any badge</h4>
                     <Link className='btn btn-primary' to='/badges/new'>Create New Badge</Link>
@@ -18,16 +19,18 @@ class BadgesList extends React.Component {
 
         return (
             <ul className='list-unstyled'>
-                {this.props.badges.map(element => {
+                {badges.map(badge => {
                     return (
-                        <li key={element.id}>
-                            <Badge
-                            firstName={element.firstName}
-                            lastName={element.lastName}
-                            jobTitle={element.jobTitle}
-                            socialMedia={element.twitter || element.socialMedia}
-                            email={element.email}
-                            />
+                        <li key={badge.id}>
+                            <Link className='text-reset text-decoration-none' to={`/badges/${badge.id}/edit`}>
+                                <Badge
+                                    firstName={badge.firstName}
+                                    lastName={badge.lastName}
+                                    jobTitle={badge.jobTitle}
+                                    socialMedia={badge.twitter || badge.socialMedia}
+                                    email={badge.email}
+                                />
+                            </Link>
                         </li>
                     )
                 })}

@@ -49,7 +49,7 @@
       "firstName": "Salomon",
       "lastName": "Moreno",
       "email": "salomorenozul@gmail.com",
-      "jobTitle": "FrontEnd React Developer",
+      "jobTitle": "React Developer",
       "socialMedia": "smorenoz",
       "id": "MLNoPVq"
     },
@@ -70,11 +70,11 @@
       "id": "qeHU5Cu"
     },
     {
-      "firstName": "Cristian",
-      "lastName": "Zapata",
+      "firstName": "Cristian Felipe",
+      "lastName": "Perez Cifuentes",
       "email": "criszapata@example.com",
-      "jobTitle": "Angular Developoer",
-      "socialMedia": "criszapata",
+      "jobTitle": "Angular Developer",
+      "socialMedia": "criszitoperez",
       "id": "qmQ8wDB"
     }
   ]
