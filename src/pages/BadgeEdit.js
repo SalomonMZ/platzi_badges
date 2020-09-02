@@ -24,7 +24,7 @@ class BadgeEdit extends React.Component {
         this.fetchData()
     }
 
-    fetchData = async e => {
+    fetchData = async () => {
         this.setState({ loading: true, error: null })
 
         try {
