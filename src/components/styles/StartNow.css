@@ -1,5 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .StartNow__container {
-  margin: 250px 0px 0px 380px;
+  margin: 0;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .StartNow__text h5 {
@@ -7,14 +16,9 @@
   margin-bottom: 1px;
 }
 
-.StartNow__text {
-  width: 100%;
-}
+.StartNow__text {}
 
-.StartNow__button {
-  text-align: center;
-}
 
 .StartNow__button-width {
-  width: 170px;
+  width: 9rem;
 }

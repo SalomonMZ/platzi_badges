@@ -1,13 +1,33 @@
-.Home__container {
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.Home__content {
   width: 100%;
-  height: 603px;
+  height: 100vh;
   background: url("../../images/stars.svg"), #1b1b25;
   background-repeat: repeat;
   color: aliceblue;
+  display:flex;
+  overflow: hidden;
 }
 
 .Home__img {
-    margin-top: 100px;
-    width: 400px;
-    height: 400px;
-}   
+    width: 350px;
+    height: 350px;
+}
+
+@media(min-width: 580px) {
+  .Home__content {
+    padding-top: 15vh;
+  }
+  .Home__content-left {
+    padding-left:15vw;
+    padding-right: 0;
+  }
+  .Home__content-right{
+    padding:0;
+  }
+}
